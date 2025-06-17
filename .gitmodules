@@ -1,0 +1,6 @@
+[submodule "ServerUtilities"]
+	path = ServerUtilities
+	url = https://github.com/GTNewHorizons/ServerUtilities
+[submodule "Hbm-s-Nuclear-Tech-GIT"]
+	path = Hbm-s-Nuclear-Tech-GIT
+	url = https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT

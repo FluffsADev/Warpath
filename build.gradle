@@ -17,6 +17,7 @@ buildscript {
             // This transitive dependency breaks plugins for some reason. Only GTNH-FG has this issue.
             exclude group: "org.eclipse.equinox"
         }
+
     }
 }
 
@@ -32,3 +33,15 @@ if(project.enable_lombok.toBoolean()) {
 }
 
 apply from: "buildscript/forge-1.7.gradle"
+
+minecraft {
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "run"
+
+    // This disables remapping for runtime so obfuscated mods like HBM don't crash
+    //makeObfSourceJar = false
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs += "-Dfml.deobfuscatedRemap=false"
+}
